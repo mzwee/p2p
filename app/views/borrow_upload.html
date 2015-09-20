@@ -1,0 +1,66 @@
+
+<html>
+  <head>
+    <title>My ParseApp site</title>
+    <!-- Bootstrap -->
+          <!-- Latest compiled and minified CSS -->
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+          <!-- Optional theme -->
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+          <!-- Latest compiled and minified JavaScript -->
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- Parse API -->
+    <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.3.5.min.js"> </script>
+    <!-- Angular JS -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <!-- Adding styling -->
+    <link rel="stylesheet" type="text/css" href="../styles/borrow_upload.css" />
+    <!-- font -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:100italic,400italic' rel='stylesheet' type='text/css'>
+  </head>
+    <body> 
+<div class ="main">
+<!--   <div class ="left"> asdasdasd</div> -->
+  <div class ="center"> 
+<!--   <div class ="right"> rtertert</div> -->
+
+<div id="main">
+  <div id="panel2" class="panel panel-default">
+      <h1> I need to borrow a(n)... </h1> 
+      <div class="panel-body">
+        <form>
+           <div class="form-group">
+                  <input id="enter_Item_Name" type="text" class="form-control" placeholder="Item name" required/>
+                </div>
+    <!--       <div class="form-group2">
+
+                  <input id="enter_category" type="text"  placeholder="Category" required/>
+                </div> <p> -->
+                          <div class ="upload">
+            <input id="profilePhotoFileUpload" type="file"/>
+          </div>
+          <button id="button" a href="borrow_lend.html" type="submit" class="btn btn-default" ng-click="regBtnClick()">Submit</button>
+
+        </form>
+      </div>
+    <script>
+      var fileUploadControl = $("#profilePhotoFileUpload")[0];
+      if (fileUploadControl.files.length > 0) {
+      var file = fileUploadControl.files[0];
+      var name = "photo.jpg";
+      var parseFile = new Parse.File(name, file);
+
+      parseFile.save().then(function() {
+      // The file has been saved to Parse.
+      }, 
+
+      
+      function(error) {
+      // The file either could not be read, or could not be saved to Parse.
+      });
+      }
+    </script>
+    </div>
+
+
+</body>
