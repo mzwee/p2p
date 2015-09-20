@@ -15,7 +15,7 @@ angular.module('p2pApp')
         return true;
       }
       return false;
-    }
+    };
     $scope.logoutBtnClick = function() {
       Parse.User.logOut();
     };
