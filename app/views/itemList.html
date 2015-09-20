@@ -1,0 +1,15 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+    Items Requested
+  </div>
+  <div class="panel-body">
+    <ul>
+      <li ng-repeat="item in items">
+        <b>Item:</b> {{item.ItemName}}<br>
+        <b>Category:</b> {{item.Category}}<br>
+        <b>Requested by:</b> {{item.requester}}<br>
+        <button ng-click="helpBtnClick(item)">Help</button>
+      </li>
+    </ul>
+  </div>
+</div>

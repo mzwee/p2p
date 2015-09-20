@@ -19,5 +19,6 @@ angular.module('p2pApp')
     $scope.regLoginClick = function() {
       Parse.User.logIn($scope.loginUser.username, $scope.loginUser.password);
       $scope.loginUser = {};
+      console.log(Parse.User.current().getSessionToken());
     };
   });
