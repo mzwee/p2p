@@ -36,5 +36,4 @@ angular
   })
   .run(function() {
       Parse.initialize("pQGBjh7rGMjfOYN2Fp1JEJDhRgeFlrGMw1xd8Ri4", "TlLtRHz7UWIU0Ne6J2IJ9xaMd2QAsPuqzfGBMjjA");
-      Parse.User.signUp("mzwee95013@gmail.com", "234567890");
   });

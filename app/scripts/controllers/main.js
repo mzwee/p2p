@@ -8,6 +8,16 @@
  * Controller of the p2pApp
  */
 angular.module('p2pApp')
-  .controller('MainCtrl', function () {
-  	
+  .controller('MainCtrl', function ($scope) {
+  	$scope.regUser = {};
+    $scope.loginUser = {};
+  	$scope.regBtnClick = function() {
+  		Parse.User.signUp($scope.regUser.username, $scope.regUser.password);
+      $scope.regUser = {};
+    };
+
+    $scope.regLoginClick = function() {
+      Parse.User.logIn($scope.loginUser.username, $scope.loginUser.password);
+      $scope.loginUser = {};
+    };
   });
