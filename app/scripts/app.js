@@ -1,0 +1,40 @@
+'use strict';
+
+/**
+ * @ngdoc overview
+ * @name p2pApp
+ * @description
+ * # p2pApp
+ *
+ * Main module of the application.
+ */
+angular
+  .module('p2pApp', [
+    'ngAnimate',
+    'ngCookies',
+    'ngResource',
+    'ngRoute',
+    'ngSanitize',
+    'ngTouch',
+    'parse-angular'
+  ])
+  .config(function ($routeProvider) {
+    $routeProvider
+      .when('/', {
+        templateUrl: 'views/main.html',
+        controller: 'MainCtrl',
+        controllerAs: 'main'
+      })
+      .when('/about', {
+        templateUrl: 'views/about.html',
+        controller: 'AboutCtrl',
+        controllerAs: 'about'
+      })
+      .otherwise({
+        redirectTo: '/'
+      });
+  })
+  .run(function() {
+      Parse.initialize("pQGBjh7rGMjfOYN2Fp1JEJDhRgeFlrGMw1xd8Ri4", "TlLtRHz7UWIU0Ne6J2IJ9xaMd2QAsPuqzfGBMjjA");
+      Parse.User.signUp("mzwee95013@gmail.com", "234567890");
+  });
