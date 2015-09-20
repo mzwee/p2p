@@ -16,7 +16,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'parse-angular'
+    'parse-angular',
+    'parse-angular.enhance'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -30,8 +31,15 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
-      .when('/borrow_lend', {
-        templateUrl: 'views/borrow_lend.html'
+      .when('/borrow', {
+        templateUrl: 'views/borrow.html',
+        controller: 'BorrowCtrl',
+        controllerAs: 'borrow'
+      })
+      .when('/itemList', {
+        templateUrl: 'views/itemList.html',
+        controller: 'ItemCtrl',
+        controllerAs: 'item'
       })
       .otherwise({
         redirectTo: '/'
