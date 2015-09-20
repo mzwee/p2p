@@ -263,7 +263,7 @@ h2 {
   hover: none;
   color: black;
   font-size: 15px;
-
+}
 
 ::-webkit-input-placeholder { color:#f00; }
 ::-moz-placeholder { color:#f00; } /* firefox 19+ */
