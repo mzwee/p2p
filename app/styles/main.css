@@ -81,6 +81,7 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+<<<<<<< HEAD
 }
 
 .browsehappy {
@@ -300,4 +301,6 @@ h1, h2 {
   hover: none;
   color: black;
   font-size: 15px;
+=======
+>>>>>>> 0e6a2332a21dd43d7c536763e58863b6141d08a2
 }

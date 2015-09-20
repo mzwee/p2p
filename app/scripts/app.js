@@ -30,6 +30,9 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
+      .when('/borrow_lend', {
+        templateUrl: 'views/borrow_lend.html'
+      })
       .otherwise({
         redirectTo: '/'
       });
