@@ -5,12 +5,18 @@
   padding: 0.2em 0;
 }
 
+#nomargin {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   padding: 0;
-  background-image: url("https://images.unsplash.com/photo-1430609098125-581618d0482f?q=80&fm=jpg&s=60723045ad92f3c0d7773bfffa01f825");
+  height: 100%;
+  background: url("https://images.unsplash.com/photo-1430609098125-581618d0482f?q=80&fm=jpg&s=60723045ad92f3c0d7773bfffa01f825") no-repeat center center fixed;
   background-repeat: no-repeat;
   background-color: black;
-  background-size: 100% 100%;
+  background-size: cover;
   max-width: 100%; 
 /*  font-family: 'Slabo 27px', serif;*/
 font-family: 'Lato', sans-serif;
@@ -108,9 +114,9 @@ input#enterName, input#enterPW{
 
 
 .main {
-  position: relative;
+  /*position: relative;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%);*/
  
 }
 
@@ -175,10 +181,9 @@ h2 {
 }
 
 .center {
-
-      width: 400px; 
-      margin-left: auto;
-      margin-right: auto;
+  width:100%;
+  text-align: center;
+  /*padding: 300px 25% 0px;*/
 }
 
 .panel-body {
@@ -193,7 +198,7 @@ h2 {
 #panel2 {
   background-color: transparent;
   border-color: transparent;
-
+  padding: 0 20%;
 }
 /*
 #button, #button2 {

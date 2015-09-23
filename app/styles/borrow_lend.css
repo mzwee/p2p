@@ -17,9 +17,11 @@ a {
 }
 #main {
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
   text-align: center;
+}
+
+#op_box {
+  margin-top: 200px;
 }
 
 

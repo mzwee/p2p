@@ -8,7 +8,7 @@
  * Controller of the p2pApp
  */
 angular.module('p2pApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('MainCtrl', function ($scope, $location) {
   	$scope.regUser = {};
     $scope.loginUser = {};
   	$scope.regBtnClick = function() {
@@ -19,6 +19,7 @@ angular.module('p2pApp')
     $scope.regLoginClick = function() {
       Parse.User.logIn($scope.loginUser.username, $scope.loginUser.password);
       $scope.loginUser = {};
+      $location.path('/borrow_lend');
       console.log(Parse.User.current().getSessionToken());
     };
   });

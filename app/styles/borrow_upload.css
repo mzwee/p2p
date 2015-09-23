@@ -233,7 +233,8 @@ h2 {
 #panel2 {
   background-color: transparent;
   border-color: transparent;
-
+  position:fixed;
+  padding: 0 20%;
 }
 /*
 #button, #button2 {

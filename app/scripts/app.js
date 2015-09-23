@@ -26,10 +26,20 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
+      .when('/borrow_lend', {
+        templateUrl: 'views/borrow_lend.html',
+        controller: 'BLCtrl',
+        controllerAs: 'bl'
+      })
+      .when('/lend_item', {
+        templateUrl: 'views/lend_item.html',
+        controller: 'LendItemCtrl',
+        controllerAs: 'lend_item'
+      })
+      .when('/borrow_upload', {
+        templateUrl: 'views/borrow_upload.html',
+        controller: 'BorrowUploadCtrl',
+        controllerAs: 'borrow-upload'
       })
       .when('/borrow', {
         templateUrl: 'views/borrow.html',
